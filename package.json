@@ -1,0 +1,23 @@
+{
+  "name": "insights-email",
+  "version": "0.0.1",
+  "author": "Connor Hindley <connor@redhat.com>",
+  "description": "Insights email templates",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redhataccess/insights-email.git"
+  },
+  "dependencies": {
+    "finalhandler": "~0.4.0",
+    "gulp": "3.9.0",
+    "gulp-autoprefixer": "2.3.1",
+    "gulp-clean": "0.3.1",
+    "gulp-inline-css": "2.0.0",
+    "gulp-livereload": "3.8.0",
+    "gulp-sass": "2.0.4",
+    "rimraf": "2.4.2",
+    "run-sequence": "1.1.2",
+    "serve-static": "~1.10.0",
+    "tiny-lr": "0.1.6"
+  }
+}
