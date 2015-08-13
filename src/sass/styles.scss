@@ -1,2 +1,10 @@
 // import the ink styles http://zurb.com/ink/
-@import "_ink.scss";
+@import "ink";
+
+@import "includes/vars";
+@import "elements/base";
+@import "components/logo";
+@import "components/masthead";
+@import "components/main-content";
+@import "components/buttons";
+@import "components/footer";

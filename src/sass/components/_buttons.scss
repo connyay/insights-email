@@ -1,0 +1,24 @@
+a.btn-cta {
+	background: $blue-light;
+	color: $white !important;
+	border-radius: 4px;
+	padding: 12px 35px;
+	margin-top: 40px;
+}
+
+.btn {
+	color: $white;
+	padding: 6px 12px;
+	transition: .2s;
+	&:hover { color: darken($white, 20) !important; }
+	&.btn-open {
+		color: $btn-open;
+		border: 2px solid $btn-open;
+		border-radius: 18px;
+		&:hover {
+			color: $blue-dark !important;
+			background-color: $white;
+			border-color: $white;
+		}
+	}
+}
