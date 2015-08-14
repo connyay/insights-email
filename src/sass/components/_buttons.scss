@@ -4,21 +4,47 @@ a.btn-cta {
 	border-radius: 4px;
 	padding: 12px 35px;
 	margin-top: 40px;
+
+	&:hover {
+		background: lighten($blue-light, 10);
+		color: $white !important;
+	}
 }
+
+//.btn {
+//	color: $white;
+//	padding: 6px 12px;
+//	transition: .2s;
+//	&:hover { color: darken($white, 20) !important; }
+//	&.btn-open {
+//		color: $btn-open;
+//		border: 2px solid $btn-open;
+//		border-radius: 18px;
+//		&:hover {
+//			color: $blue-dark !important;
+//			background-color: $white;
+//			border-color: $white;
+//		}
+//	}
+//}
 
 .btn {
 	color: $white;
 	padding: 6px 12px;
-	transition: .2s;
+	transition: .3s;
+
 	&:hover { color: darken($white, 20) !important; }
-	&.btn-open {
-		color: $btn-open;
-		border: 2px solid $btn-open;
-		border-radius: 18px;
-		&:hover {
-			color: $blue-dark !important;
-			background-color: $white;
-			border-color: $white;
-		}
+}
+
+.btn.btn-open {
+	color: $btn-open;
+	//	border: 2px solid $btn-open;
+	box-shadow: inset 0 0 0 2px $btn-open;
+	border-radius: 18px;
+
+	&:hover {
+		color: $blue-dark !important;
+		background-color: $white;
+		box-shadow: inset 0 0 0 22px $white;
 	}
 }

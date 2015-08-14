@@ -1,0 +1,15 @@
+.insights-logo, table[class="body"] table.columns td.insights-logo {
+	width: 90% !important;
+	margin: 0 5%;
+	display: block;
+	color: $white;
+	font-weight: bold;
+	font-size: 12px;
+
+	strong, span { margin-top: 8px; }
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}

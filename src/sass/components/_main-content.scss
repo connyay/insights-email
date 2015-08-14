@@ -1,20 +1,23 @@
 .main-content {
+	padding: 62px 0 50px;
 	background: $white;
 }
 
 .number {
+	position: relative;
 	width: 112px;
 	height: 112px;
 	border-radius: 50%;
-	display: table;
+	display: inline-block;
 	margin: 0 auto;
 	text-align: center;
 	background: $blue-dark;
+	box-shadow: 0 0 0 12px #cad6e2;
 
 	span {
 		position: relative;
-		margin-top: 30px;
-		display: table-cell;
+		margin-top: 50px;
+		display: inline-block;
 		font-size: 62px;
 		font-weight: bold;
 		vertical-align: middle;
@@ -22,13 +25,19 @@
 	}
 
 	&.number-wpercent {
-		padding-right: 20px;
+		span { margin-left: -6px; }
+		span.one-hundred {
+			margin-top: 48px;
+			font-size: 48px;
+		}
 	}
 
 	.percent {
 		position: absolute;
+		top: -4px;
+		right: -20px;
+		margin: 0;
 		font-size: 22px;
-		top: 0;
-		right: 5px;
+		line-height: 0;
 	}
 }
