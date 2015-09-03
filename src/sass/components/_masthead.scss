@@ -2,12 +2,12 @@
 	background: url(img/bg_masthead.jpg) no-repeat center top $blue-dark;
 	padding: 20px 0 80px;
 
+	a { color: #fff; }
+
 	.header-links {
 		margin-top: 9px;
 
-		@media only screen and (min-width: 480px) {
-			float: right;
-		}
+		@media only screen and (min-width: 480px) { float: right; }
 	}
 }
 

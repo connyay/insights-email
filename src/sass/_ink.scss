@@ -356,17 +356,17 @@ a {
   text-decoration: none;
 }
 
-a:hover { 
-  color: #2795b6 !important;
-}
-
-a:active { 
-  color: #2795b6 !important;
-}
-
-a:visited { 
-  color: #2ba6cb !important;
-}
+//a:hover {
+//  color: #2795b6 !important;
+//}
+//
+//a:active {
+//  color: #2795b6 !important;
+//}
+//
+//a:visited {
+//  color: #2ba6cb !important;
+//}
 
 h1 a, 
 h2 a, 
@@ -383,7 +383,7 @@ h3 a:active,
 h4 a:active, 
 h5 a:active, 
 h6 a:active { 
-  color: #2ba6cb !important; 
+//  color: #2ba6cb !important;
 } 
 
 h1 a:visited, 
@@ -392,7 +392,7 @@ h3 a:visited,
 h4 a:visited, 
 h5 a:visited, 
 h6 a:visited { 
-  color: #2ba6cb !important; 
+//  color: #2ba6cb !important;
 } 
 
 /* Panels */
