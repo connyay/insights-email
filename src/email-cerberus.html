@@ -3,11 +3,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Test</title>
+	<title>Insights Weekly Report</title>
 	<style>
 
 
-		@import url(https://fonts.googleapis.com/css?family=Roboto:300); /*Calling our web font*/
 		@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
 
 		/* Some resets and issue fixes */
@@ -57,7 +56,7 @@
 		}
 
 		.header {
-			background: url('https://litmus-builder.s3.amazonaws.com/1440617131733') #3b464e;
+			background: url('https://access.redhat.com/insights/static/emails/img/bg_masthead.jpg') #3b464e;
 			background-size: cover;
 		}
 
@@ -94,8 +93,8 @@
 										<td valign="top">
 											<table border="0" cellspacing="0" cellpadding="0" width="600" class="100p">
 												<tr>
-													<td align="left" width="50%" class="100p"><img src="l_redhat.png" alt="Logo" border="0" style="display:block" /></td>
-													<td width="50%" class="hide" align="right" style="font-size:14px; color:#FFFFFF;"><font face="'Arimo', Arial, sans-serif"><a href="#" style="color:#FFFFFF; text-decoration:none;">RH Access Portal</a> &nbsp; | &nbsp; <a href="#" style="color:#FFFFFF; text-decoration:none;">Dashboard</a></font></td>
+													<td align="left" width="50%" class="100p"><img src="https://access.redhat.com/insights/static/emails/img/l_redhat.png" alt="Logo" border="0" style="display:block" /></td>
+													<td width="50%" class="hide" align="right" style="font-size:14px; color:#FFFFFF;"><font face="'Arimo', Arial, sans-serif"><a href="https://access.redhat.com/" style="color:#FFFFFF; text-decoration:none;">Customer Portal</a> &nbsp; | &nbsp; <a href="https://access.redhat.com/insights" style="color:#FFFFFF; text-decoration:none;">Insights</a></font></td>
 												</tr>
 											</table>
 											<table border="0" cellspacing="0" cellpadding="0" width="600" class="100p">
@@ -108,9 +107,9 @@
 															<tbody>
 															<tr>
 																<td>
-																	<img src="l_insights.png" width="544" style="max-width: 100%; height: auto;" />
+																	<img src="https://access.redhat.com/insights/static/emails/img/l_insights.png" width="544" style="max-width: 100%; height: auto;" />
 																	<div align="right" style="margin-top: 8px">
-																		<span style="font-size:14px; font-family: 'Arimo', Arial, sans-serif;">Weekly Report for <date style="font-weight: 700">August 09, 2015</date></span>
+																		<span style="font-size:14px; font-family: 'Arimo', Arial, sans-serif;">Weekly Report for <date style="font-weight: 700">{{ formatted_date }}</date></span>
 																	</div>
 																</td>
 															</tr>
@@ -139,7 +138,7 @@
 						<td align="center" style="padding: 60px 0 0; font-size:36px; line-height: 0; color:#585858; font-weight: 700"><font face="'Arimo', Arial, sans-serif">Your weekly report</font></td>
 					</tr>
 					<tr>
-						<td align="center" style="font-size:16px; line-height: 0; color:#585858; padding-bottom: 40px;"><font face="'Arimo', Arial, sans-serif">For <strong>54 systems</strong> registered with Red Hat Access Insights</font></td>
+						<td align="center" style="font-size:16px; line-height: 0; color:#585858; padding-bottom: 40px;"><font face="'Arimo', Arial, sans-serif">For <strong>{{ total_systems }} systems</strong> registered with Red Hat Access Insights</font></td>
 					</tr>
 				</table>
 
@@ -155,7 +154,7 @@
 											<tbody style="width: 100%;">
 											<tr>
 												<td>
-													<a href="#" style="width: 100%; height: 100%; padding: 22px 0 0; display: block; color: #ffffff; text-decoration: none;">21</a>
+													<a href="https://access.redhat.com/insights/overview/" style="width: 100%; height: 100%; padding: 22px 0 0; display: block; color: #ffffff; text-decoration: none;">{{ new_actions }}</a>
 												</td>
 											</tr>
 											</tbody>
@@ -164,7 +163,7 @@
 								</tr>
 								<tr>
 									<td align="center" style="font-family: 'Arimo', Arial, sans-serif; padding-top:16px">
-										<a href="#" style="color: #535e6a;  text-decoration: none;">New Actions</a>
+										<a href="https://access.redhat.com/insights/overview/" style="color: #535e6a;  text-decoration: none;">New Actions</a>
 									</td>
 								</tr>
 							</table>
@@ -178,7 +177,7 @@
 											<tbody style="width: 100%;">
 											<tr>
 												<td>
-													<a href="#" style="width: 100%; height: 100%; padding: 22px 0 0; display: block; color: #ffffff; text-decoration: none;">52</a>
+													<a href="https://access.redhat.com/insights/overview/?severity=error" style="width: 100%; height: 100%; padding: 22px 0 0; display: block; color: #ffffff; text-decoration: none;">{{ high_severity_hits }}</a>
 												</td>
 											</tr>
 											</tbody>
@@ -187,7 +186,7 @@
 								</tr>
 								<tr>
 									<td align="center" style="font-family: 'Arimo', Arial, sans-serif; padding-top:16px">
-										<a href="#" style="color: #535e6a; text-decoration: none;">Severity Hits</a>
+										<a href="https://access.redhat.com/insights/overview/?severity=error" style="color: #535e6a; text-decoration: none;">High Severity Hits</a>
 									</td>
 								</tr>
 							</table>
@@ -201,8 +200,8 @@
 											<tbody style="width: 100%;">
 											<tr>
 												<td>
-													<a href="#" style="width: 100%; height: 100%; padding: 32px 0 0; display: block; color: #ffffff; text-decoration: none;">
-														<span style="vertical-align: top; font-size: 42px">100</span><span style="font-size: 16px; vertical-align: top">%</span>
+													<a href="https://access.redhat.com/insights/systems/?sort=last_check_in&dir=asc" style="width: 100%; height: 100%; padding: 32px 0 0; display: block; color: #ffffff; text-decoration: none;">
+														<span style="vertical-align: top; font-size: 42px">{{ checking_in_pct }}</span><span style="font-size: 16px; vertical-align: top">%</span>
 													</a>
 												</td>
 											</tr>
@@ -211,7 +210,9 @@
 									</td>
 								</tr>
 								<tr>
-									<td align="center" style="color: #535e6a; font-family: 'Arimo', Arial, sans-serif; padding-top:16px">Systems Checking In</td>
+									<td align="center" style="color: #535e6a; font-family: 'Arimo', Arial, sans-serif; padding-top:16px">
+										<a href="https://access.redhat.com/insights/systems/?sort=last_check_in&dir=asc" style="color: #535e6a; text-decoration: none;">Systems Checking In</a>
+									</td>
 								</tr>
 							</table>
 						</td>
@@ -235,7 +236,7 @@
 						<td align="center" style="font-size:16px; color:#333333;">
 							<font face="'Arimo', Arial, sans-serif"; style="font-size: 12px;">
 								Copyright © 2015 Red Hat, All rights reserved.<br />
-								<a href="#" style="color: #333333;">Update email preferences</a>
+								<a href="https://access.redhat.com/insights/config/messaging/" style="color: #333333;">Update email preferences</a>
 							</font>
 						</td>
 					</tr>
